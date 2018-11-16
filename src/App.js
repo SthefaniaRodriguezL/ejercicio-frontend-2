@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import Tables from './TableInfo'
 import Add from './AddEmployee'
 
 class App extends Component {
@@ -7,10 +6,7 @@ class App extends Component {
   render() {
     return (
      <div>
-      <div>
        <Add />
-      </div>
-       <Tables />
      </div>
     );
   }

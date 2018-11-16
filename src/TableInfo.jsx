@@ -16,7 +16,6 @@ class Tables extends Component {
          <table>
           <thead>
            <tr>
-             <th>id</th>
              <th>name</th>
              <th>company</th>
              <th>salary</th>
@@ -29,7 +28,6 @@ class Tables extends Component {
     return (
          <tbody>
            <tr>
-             <td>{item.id}</td>
              <td>{item.name}</td>
              <td>{item.company}</td>
              <td>${item.salary.toFixed(2)}</td>

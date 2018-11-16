@@ -9,6 +9,7 @@ class Tables extends Component {
 
     }
   }
+
   render(){
     return(
       <div>
@@ -31,7 +32,7 @@ class Tables extends Component {
              <td>{item.id}</td>
              <td>{item.name}</td>
              <td>{item.company}</td>
-             <td>{item.salary}</td>
+             <td>${item.salary.toFixed(2)}</td>
              <td>{item.age}</td>
              <td>{item.phone}</td>
              <td>{item.email}</td>

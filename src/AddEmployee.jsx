@@ -32,9 +32,36 @@ class Add extends Component {
     return(
       <div className='add'>
        <form onSubmit={this.addEmployees}>
+       <div>
          <input ref={(a) => this._inputElement = a}
-            placeholder='employee information'></input>
-         <button type='submit'>Add</button>
+            placeholder="name"></input>
+          <button type='submit'>Submit</button>
+      </div>
+      <div>
+         <input ref={(a) => this._inputElement = a}
+            placeholder='company'></input>
+          <button type='submit'>Submit</button>
+      </div>
+      <div>
+          <input ref={(a) => this._inputElement = a}
+               placeholder='salary'></input>
+           <button type='submit'>Submit</button>
+      </div>
+      <div>
+               <input ref={(a) => this._inputElement = a}
+                  placeholder='age'></input>
+                  <button type='submit'>Submit</button>
+     </div>
+     <div>
+          <input ref={(a) => this._inputElement = a}
+             placeholder='phone'></input>
+           <button type='submit'>Submit</button>
+    </div>
+    <div>
+           <input ref={(a) => this._inputElement = a}
+              placeholder='email'></input>
+            <button type='submit'>Submit</button>
+    </div>
          <TableInfo />
        </form>
        <AddInfo entries={this.state.employeeInfo}/>

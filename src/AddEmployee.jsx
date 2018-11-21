@@ -7,16 +7,25 @@ class Add extends Component {
   constructor(props){
     super(props);
     this.state = {
+      //this gets the information of all the employees 
       employeeInfo: employees
     }
+    //to render all the information added or removed
     this.addEmployees=this.addEmployees.bind(this);
+    this.removeInfo=this.removeInfo.bind(this);
   }
+     removeInfo(id) {
+       console.log("this removes");
+     }
      addEmployees(e){
+       //this is to make sure it isn't empty and it has an action
       if(this._inputElement.value !== ''){
+        //to know when it should start or stop the text exactly
         var newInfo = {
           text: this._inputElement.value,
           key: Date.now()
         };
+        //this is for the state can be dynamic not just static
         this.setState((prevState) => {
           return {
             employeeInfo: prevState.employeeInfo.concat(newInfo)
@@ -33,7 +42,7 @@ class Add extends Component {
       <div className='add'>
        <form onSubmit={this.addEmployees}>
        <div>
-         <input ref={(a) => this._inputElement = a}
+           <input ref={(a) => this._inputElement = a}
             placeholder="name"></input>
           <button type='submit'>Submit</button>
       </div>
@@ -53,7 +62,7 @@ class Add extends Component {
                   <button type='submit'>Submit</button>
      </div>
      <div>
-          <input ref={(a) => this._inputElement = a}
+          <input ref={(e) => this._inputElement = e}
              placeholder='phone'></input>
            <button type='submit'>Submit</button>
     </div>

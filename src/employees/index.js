@@ -1,3 +1,4 @@
+///All the information I want to be rendered
 let employees = [
   {
     id: 0,

@@ -7,7 +7,7 @@ class Add extends Component {
   constructor(props){
     super(props);
     this.state = {
-      //this gets the information of all the employees 
+      //this gets the information of all the employees
       employeeInfo: employees
     }
     //to render all the information added or removed
@@ -15,7 +15,7 @@ class Add extends Component {
     this.removeInfo=this.removeInfo.bind(this);
   }
      removeInfo(id) {
-       console.log("this removes");
+       this.props.removeInfo(id);
      }
      addEmployees(e){
        //this is to make sure it isn't empty and it has an action
@@ -70,6 +70,7 @@ class Add extends Component {
            <input ref={(a) => this._inputElement = a}
               placeholder='email'></input>
             <button type='submit'>Submit</button>
+            <button onClick={(e) => this.removeInfo(this.props.id)}>remove</button>{this.props.employeeInfo}
     </div>
          <TableInfo />
        </form>

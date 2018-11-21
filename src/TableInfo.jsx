@@ -9,7 +9,8 @@ class Tables extends Component {
 
     }
   }
-//this is where I'm giving it the decimal function and where to make the employee info iterate
+//this is where I'm giving it the decimal function
+//the .map method is to show the items and lets us see the information
   render(){
     return(
       <div>
